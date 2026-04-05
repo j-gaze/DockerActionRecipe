@@ -1,0 +1,11 @@
+name: Action CI
+on: [push]
+jobs:
+    ci:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: j-gaze/DockerActionRecipe@main
+            - name: Run my own container action
+              uses: ./
+              with:
+                who-to-greet: '@wulfland'
